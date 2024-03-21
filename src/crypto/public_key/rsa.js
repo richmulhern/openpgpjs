@@ -484,7 +484,7 @@ async function nodeDecrypt(data, n, e, d, p, q, u) {
   try {
     return new Uint8Array(nodeCrypto.privateDecrypt(key, data));
   } catch (err) {
-    throw new Error('Decryption error');
+    throw new Error('Decryption error', err);
   }
 }
 
